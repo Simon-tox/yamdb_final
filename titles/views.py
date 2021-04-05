@@ -1,0 +1,18 @@
+from rest_framework import viewsets
+
+from api.permissions import IsAdminOrStaff, ReadOnly
+
+from .filters import TitleFilter
+from .models import Title
+from .serializers import TitleGetSerializer, TitlePostSerializer
+
+
+class TitleViewSet(viewsets.ModelViewSet):
+    queryset = Title.objects.all()
+    permission_classes = [ReadOnly | IsAdminOrStaff]
+    filterset_class = TitleFilter
+
+    def get_serializer_class(self):
+        if self.request.method == "GET":
+            return TitleGetSerializer
+        return TitlePostSerializer
