@@ -16,7 +16,8 @@ router_v1.register('genres', GenreViewSet, basename='genres')
 router_v1.register('titles', TitleViewSet, basename='titles')
 
 router_v1.register(r'titles/(?P<title_id>[0-9]+)/reviews', ReviewViewSet)
-router_v1.register(r'titles/(?P<title_id>[0-9]+)/reviews/(?P<review_id>[0-9]+)/comments',
+router_v1.register(r'titles/(?P<title_id>[0-9]+)/reviews/(?P<review_id>['
+                   r'0-9]+)/comments',
                    CommentViewSet,
                    basename='comments')
 
