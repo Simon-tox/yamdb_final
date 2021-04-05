@@ -14,10 +14,8 @@ class Title(models.Model):
     name = models.CharField(max_length=120)
     description = models.TextField(blank=True)
     year = models.IntegerField(validators=
-
                                [MaxValueValidator
-                                (limit_value=datetime.date.today().year)
-                                ])
+                               (limit_value=datetime.date.today().year)])
 
     def __str__(self):
         return self.name
