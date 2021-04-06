@@ -6,7 +6,7 @@ on: [push]
 
 jobs:
   tests:
-    runs-on: ubuntu-lateste
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
