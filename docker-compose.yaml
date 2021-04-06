@@ -14,9 +14,6 @@ services:
   web:
     build: .
     restart: always
-    volumes:
-      - static_volume:/code/staticfiles
-      - media_volume:/code/media
     ports:
       - "8000:8000"
 
@@ -36,7 +33,3 @@ services:
       depends_on:
         - web
 
-volumes:
-  postgres_data:
-  static_volume:
-  media_volume:
