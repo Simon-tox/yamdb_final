@@ -13,8 +13,10 @@ from .serializers import CommentsSerializer, ReviewSerializer
 class ReviewViewSet(viewsets.ModelViewSet):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly &
-                          (IsAuthorOrReadOnly | IsModerator | IsAdminOrStaff)]
+    permission_classes = [
+        (IsAuthenticatedOrReadOnly) &
+        (IsAuthorOrReadOnly | IsModerator | IsAdminOrStaff)
+    ]
 
     def get_queryset(self):
         title = get_object_or_404(Title, pk=self.kwargs.get('title_id'))
@@ -35,8 +37,10 @@ class ReviewViewSet(viewsets.ModelViewSet):
 
 class CommentViewSet(viewsets.ModelViewSet):
     serializer_class = CommentsSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly &
-                          (IsAuthorOrReadOnly | IsModerator | IsAdminOrStaff)]
+    permission_classes = [
+        IsAuthenticatedOrReadOnly &
+        (IsAuthorOrReadOnly | IsModerator | IsAdminOrStaff)
+    ]
 
     def get_queryset(self):
         title = get_object_or_404(Title, pk=self.kwargs.get('title_id'))

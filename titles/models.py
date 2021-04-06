@@ -13,11 +13,10 @@ class Title(models.Model):
     genre = models.ManyToManyField(Genre, related_name="titles")
     name = models.CharField(max_length=120)
     description = models.TextField(blank=True)
-    year = models.IntegerField(validators=
-
-                               [MaxValueValidator
-                                (limit_value=datetime.date.today().year)
-                                ])
+    year = models.IntegerField(validators=[
+        MaxValueValidator
+        (limit_value=datetime.date.today().year)
+    ])
 
     def __str__(self):
         return self.name
