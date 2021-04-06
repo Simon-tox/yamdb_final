@@ -14,8 +14,9 @@ class ReviewViewSet(viewsets.ModelViewSet):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
     permission_classes = [
-        IsAuthenticatedOrReadOnly &
-        (IsAuthorOrReadOnly | IsModerator | IsAdminOrStaff)
+        IsAuthenticatedOrReadOnly & (
+                IsAuthorOrReadOnly | IsModerator | IsAdminOrStaff
+        )
     ]
 
     def get_queryset(self):
@@ -38,8 +39,9 @@ class ReviewViewSet(viewsets.ModelViewSet):
 class CommentViewSet(viewsets.ModelViewSet):
     serializer_class = CommentsSerializer
     permission_classes = [
-        IsAuthenticatedOrReadOnly &
-        (IsAuthorOrReadOnly | IsModerator | IsAdminOrStaff)
+        IsAuthenticatedOrReadOnly & (
+                IsAuthorOrReadOnly | IsModerator | IsAdminOrStaff
+        )
     ]
 
     def get_queryset(self):
