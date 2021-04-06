@@ -14,7 +14,7 @@ class ReviewViewSet(viewsets.ModelViewSet):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
     permission_classes = [
-        (IsAuthenticatedOrReadOnly) &
+        IsAuthenticatedOrReadOnly &
         (IsAuthorOrReadOnly | IsModerator | IsAdminOrStaff)
     ]
 
