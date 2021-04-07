@@ -17,5 +17,5 @@ class TestDockerfile:
             'Проверьте, что добавили образ postgres:latest в файл docker-compose'
         )
         assert re.search(r'build:\s+\.', docker_compose), (
-            'Проверьте, что добавили сборку контейнера из Dockerfile в файл docker-compose'
+            'Проверьте, что добавили сборку контейнера из dockerfile в файл docker-compose'
         )
