@@ -13,13 +13,13 @@ services:
       - ./.env
   web:
     build: .
+    image: sgoldort/yamdb_final:latest
     restart: always
     ports:
       - "8000:8000"
     volumes:
       - static_volume:/code/staticfiles
       - media_volume:/code/media
-
     depends_on:
       - db
     env_file:
@@ -36,3 +36,7 @@ services:
       depends_on:
         - web
 
+volumes:
+  postgres_data:
+  static_volume:
+  media_volume:
