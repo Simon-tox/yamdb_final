@@ -12,13 +12,14 @@ services:
     env_file:
       - ./.env
   web:
-    build: .
+    image: sgoldort/yamdb_final:latest
     restart: always
-    ports:
-      - "8000:8000"
+    command: gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - static_volume:/code/staticfiles
       - media_volume:/code/media
+    expose:
+      - 8000
     depends_on:
       - db
     env_file:
