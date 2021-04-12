@@ -6,7 +6,7 @@ djangorestframework==3.11.0  # via -r requirements.in
 djangorestframework-simplejwt
 django-cors-headers
 gunicorn==20.0.4
-psycopg2-binary==2.8.5
+psycopg2-binary
 idna==2.9                 # via requests
 importlib-metadata==1.6.0  # via pluggy, pytest
 more-itertools==8.2.0     # via pytest
