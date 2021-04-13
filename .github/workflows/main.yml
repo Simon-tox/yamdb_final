@@ -72,6 +72,7 @@ jobs:
          key: ${{ secrets.SSH_KEY }}
          passphrase: ${{ secrets.PASSPHRASE }} # если ваш ssh-ключ защищен паролем
          script: |
+              cd ${{ env.PROJECT_ROOT }}
               sudo apt install docker docker-compose -y
               sudo systemctl start docker
               sudo systemctl enable docker
