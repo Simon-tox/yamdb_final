@@ -10,7 +10,7 @@ services:
       - postgres_data:/var/lib/postgresql/data/
 
     env_file:
-      - ./.env
+      - ./.env.example
   web:
     build: .
     image: sgoldort/yamdb_final:latest
@@ -23,7 +23,7 @@ services:
     depends_on:
       - db
     env_file:
-      - ./.env
+      - ./.env.example
   nginx:
     image: nginx:1.19.6
     volumes:
