@@ -59,7 +59,7 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
-        source: "docker-compose.yaml, nginx/nginx.conf, static, .env"
+        source: "docker-compose.yaml, nginx/nginx.conf, static, .env.example"
     - name: executing remote ssh commands to deploy
       uses: appleboy/ssh-action@master
       with:
