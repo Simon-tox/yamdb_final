@@ -5,6 +5,10 @@ services:
   db:
 
     image: postgres:12.4
+    environment:
+      - POSTGRES_DB=yamdb
+      - POSTGRES_USER=yatube_user
+      - POSTGRES_PASSWORD=yatube_password
 
     volumes:
       - postgres_data:/var/lib/postgresql/data/
