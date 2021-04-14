@@ -1,8 +1,6 @@
 ### Describtion
 Docker is a platform for REST API of the service YaMDB on the bases Dlangob and PostgreSql 12.4
 ![example workflow](https://github.com/Simon-tox/yamdb_final/actions/workflows/main.yml/badge.svg)
-![example branch parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=feature-1)
-![example event parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=pull_request)
 
 ### Commands for running the project
 
