@@ -3,7 +3,6 @@ version: '3'
 services:
 
   db:
-    dockerfile: Dockerfile
     image: postgres:12.4
     environment:
       - POSTGRES_DB=yamdb
