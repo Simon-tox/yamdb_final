@@ -11,14 +11,14 @@ A step by step series of examples that tell you have to get a development env ru
 Clone a repository from the Gitgub
 
 ```
-  git clone https://github.com/Simon-tox/infra_sp2.git
+  git clone https://github.com/Simon-tox/yamdb_final.git
 
 ```
 Go to the folder with a project
 
 ```
 
-cd infra_sp2
+cd yamdb_final
 
 ```
 
