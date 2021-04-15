@@ -1,6 +1,9 @@
 ### Describtion
 Docker is a platform for REST API of the service YaMDB on the bases Dlangob and PostgreSql 12.4
 
+
+![yamdb status](https://github.com/Simon-tox/yamdb_final/workflows/yamdb_workflows.yaml/badge.svg)
+
 ### Commands for running the project
 
 A step by step series of examples that tell you have to get a development env running
@@ -8,14 +11,14 @@ A step by step series of examples that tell you have to get a development env ru
 Clone a repository from the Gitgub
 
 ```
-  git clone https://github.com/Simon-tox/infra_sp2.git
+  git clone https://github.com/Simon-tox/yamdb_final.git
 
 ```
 Go to the folder with a project
 
 ```
 
-cd infra_sp2
+cd yamdb_final
 
 ```
 
