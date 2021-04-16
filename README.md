@@ -4,7 +4,8 @@ Docker is a platform for REST API of the service YaMDB on the bases Dlangob and 
 
 ![yamdb status](https://github.com/Simon-tox/yamdb_final/workflows/yamdb_workflow/badge.svg)
 
-Публичный IP: 130.193.40.231
+### Публичный IP: 130.193.40.231
+
 
 ### Commands for running the project
 
