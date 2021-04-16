@@ -16,8 +16,6 @@ services:
   web:
     image: sgoldort/yamdb_final:latest
     restart: always
-    ports:
-      - "8000:8000"
     volumes:
       - static_volume:/code/staticfiles
       - media_volume:/code/media
